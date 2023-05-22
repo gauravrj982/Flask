@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+            <a href="/delete/{{ loop.index0 }}">Delete</a>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="/">Go back to home</a></p>
+</body>
+</html>

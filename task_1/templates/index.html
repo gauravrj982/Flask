@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management</title>
+</head>
+<body>
+    <h1>Welcome to Task Management</h1>
+    
+    <h2>Create a New Task</h2>
+    <form action="/create" method="POST">
+        <input type="text" name="task" placeholder="Enter task description">
+        <button type="submit">Add Task</button>
+    </form>
+    
+    <h2>Your Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="/tasks">View all tasks</a></p>
+</body>
+</html>
